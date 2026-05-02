@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '24'
 
 on:
   # Standalone trigger for PR validation
@@ -47,6 +47,8 @@ jobs:
     - name: Setup pnpm
       if: hashFiles('package.json') != ''
       uses: pnpm/action-setup@v4
+      with:
+        version: 10.14.0
 
     - name: Get Hugo Version
       id: hugo-version
@@ -65,8 +67,8 @@ jobs:
         VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
         
         # Fallback to a known stable version if not specified
-        DEFAULT_VERSION="0.154.5"
-        VERSION=${VERSION:-$DEFAULT_VERSION}
+        DEFAULT_VERSION="0.160.0"
+        VERSION="0.160.0"
         
         # Validate version format (basic check)
         if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
@@ -79,17 +81,16 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # Install Tailwind CLI if package.json exists
-        if [ -f "package.json" ]; then
-          echo "Installing Tailwind dependencies..."
-          pnpm install --no-frozen-lockfile || npm install
-        fi
+      if [ -f "package.json" ]; then
+        echo "Installing pnpm dependencies..."
+        pnpm install --frozen-lockfile
+      fi
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
-      with:
-        hugo-version: ${{ env.HUGO_VERSION }}
-        extended: true
+    uses: gohugoio/actions/hugo@v0
+    with:
+      hugo-version: ${{ env.HUGO_VERSION }}
+      extended: true
 
     # Cache dependencies (Go modules, node_modules) - stable, rarely changes
     - uses: actions/cache@v5
