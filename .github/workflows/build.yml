@@ -61,21 +61,19 @@ jobs:
           echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
           echo "Using Hugo version: $VERSION"
 
-<<<<<<< HEAD
-    - name: Install dependencies
-      run: |
-        if [ -f "package.json" ]; then
-          echo "Installing pnpm dependencies..."
-          pnpm install --frozen-lockfile
-        fi
-=======
+      - name: Install dependencies
+        run: |
+          if [ -f "package.json" ]; then
+             echo "Installing pnpm dependencies..."
+             pnpm install --frozen-lockfile
+          fi
+        
       - name: Install dependencies
         run: |
           if [ -f "package.json" ]; then
             echo "Installing pnpm dependencies..."
             pnpm install --frozen-lockfile
           fi
->>>>>>> 35e7a6c (Fix build workflow indentation)
 
       - name: Setup Hugo
         uses: gohugoio/actions/hugo@v0
