@@ -81,10 +81,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-      if [ -f "package.json" ]; then
-        echo "Installing pnpm dependencies..."
-        pnpm install --frozen-lockfile
-      fi
+        if [ -f "package.json" ]; then
+          echo "Installing pnpm dependencies..."
+          pnpm install --frozen-lockfile
+        fi
 
     - name: Setup Hugo
     uses: gohugoio/actions/hugo@v0
