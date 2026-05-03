@@ -10,100 +10,71 @@ sections:
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
-      text: ''
+      text: |
+        <style>
+          section:first-of-type time,
+          section:first-of-type .text-sm {
+            display: none !important;
+          }
+        </style>
+
+        Ph.D. researcher in Computational Science and Engineering at the University of Massachusetts Dartmouth, working at the intersection of CFD (multiphase flows), high-performance computing, and AI/ML. My research focuses on water-entry physics, fluid–structure interaction, cavity dynamics, and added mass prediction using large-scale parallel simulations. I also develop AI-driven workflows including RAG chatbots, LLM deployment pipelines, and deep learning models for scientific and engineering applications.
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
         url: uploads/resume.pdf
+
       headings:
-        about: ''
+        about: 'About Me'
         education: ''
         interests: ''
+
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:
+        image:
+          filename: background.gif
+          filters:
+            brightness: 0.75
+          size: cover
+          position: center
+          parallax: false
         gradient_mesh:
-          enable: true
+          enable: false
 
       # Name heading sizing to accommodate long or short names
       name:
-        size: md # Options: xs, sm, md, lg (default), xl
+        size: md # Options: xs, sm, md, lg, xl
 
       # Avatar customization
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        size: medium # Options: small, medium, large, xl, xxl
+        shape: circle # Options: circle, square, rounded
+
   - block: markdown
     content:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        My research investigates the physics and numerical modeling of complex multiphase flow problems, particularly the water entry of solid bodies. These problems involve strong coupling between air, water, and moving solids, making them computationally challenging and physically rich.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        My work focuses on:
+
+        Multiphase CFD and Water Entry Physics: 
+        Studying cavity formation, splash dynamics, air entrainment, pinch-off, and added mass during the impact of solid bodies on a free surface.
+
+        Fluid–Structure Interaction: 
+        Developing numerical approaches to capture the interaction between moving solids and surrounding fluids using fully Eulerian and fictitious-domain methods.
+
+        High-Performance Scientific Computing: 
+        Designing scalable CFD workflows using MPI, OpenMP, Linux HPC clusters, domain decomposition, and efficient linear solvers.
+
+        AI/ML for Scientific Computing:
+        Building deep learning and LLM-based tools for prediction, automation, code assistance, and scientific data analysis.
 
         Please reach out to collaborate 😃
     design:
       columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: blog
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 10
-      # Filter on criteria
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
+
   - block: cta-card
     demo: true # Only display this section in the HugoBlox Kit demo site
     content:

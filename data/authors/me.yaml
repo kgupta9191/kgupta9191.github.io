@@ -5,8 +5,6 @@ name:
   display: Kartik Gupta
   given: Kartik
   family: Gupta
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
 postnominals:
   - PhD
 status:
@@ -17,55 +15,74 @@ bio: |
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:kgupta3@umassd.edu
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
   - icon: brands/github
-    url: https://github.com/example
+    url: https://github.com/kgupta9191
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://www.linkedin.com/in/kartik-gupta-063586128/
 
 interests:
   - Large Language Models
-  - Computer Vision
+  - Fluid–Structure Interaction (CFD)
   - Reinforcement Learning
-  - AI Ethics
+  - High-Performance Scientific Computing
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: PhD Computational Science & Engineering
+    institution: University of Massachusetts Dartmouth
+    start: 2023
+    end: Present
     summary: |
       Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
     button:
       text: Download dissertation
       url: /resume.pdf
       icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+  - degree: MS Data Science
+    institution: University of Massachusetts Dartmouth
+    start: 2025
+    end: Present
+  - degree: MS Mechanical & Process Engineering
+    institution: TU Freiberg (Germany)
+    start: 2019
+    end: 2022
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Teaching Assistant (High Performance Scientific Computing)
+    org: University of Massachusetts Dartmouth
+    start: December 2025
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
+      - Guided students in Python, C, numerical linear algebra, and parallel computing (MPI, OpenMP, CUDA), while teaching Git, Bitbucket and Jupyter-based data analysis.
+      - Mentored Data Science students to develop and optimize parallel programs for achieving significant speedups (using GPUs), covering memory access, load balancing, debugging (GDB, TotalView), and performance/scalability analysis.
+      - Delivered technical presentations and clearly articulated complex computational concepts to diverse student audiences.
     button:
       text: View portfolio
       url: /
       icon: hero/arrow-down-tray
+  - role: Graduate Assistant (Machine Learning / AI)
+    start: January 2025
+    summary: |
+      - Deployed Ollama LLM on a Unity HPC cluster via Docker with GPU acceleration, achieving 3–5× inference throughput improvement over CPU baselines; profiled end-to-end latency and memory footprint to identify optimization opportu- nities analogous to TensorRT-LLM deployment workflows.
+      - Built and benchmarked a production-ready RAG-based LLM chatbot using HuggingFace embeddings, FAISS vector search, and REST APIs on AWS; improved response relevance by 40% through prompt engineering, retrieval scheduling, and inference pipeline optimization — directly applicable to GenAI inference serving (vLLM/SGLang patterns).
+      - Developed CNN-based image classification pipeline (Xception / ImageNet transfer learning, TensorFlow/Keras) for brain tumor detection; applied INT8-equivalent quantization-aware training strategies, data augmentation, and cross- validation to optimize model size and throughput for clinical AI pipelines.
+      - Built time-series regression models (ARIMA, XGBoost) to forecast COVID-19 trends from epidemiological data; reduced MSE by 30% via feature engineering and hyperparameter tuning on temporal waveform data.
+  - role: Research Assistant (High-Performance Multiphase CFD Simulations)
+    org: University of Massachusetts Dartmouth
+    start: January 2023
+    end: September 2025
+    summary: |
+      - Developed a C++ based fully Eulerian multiphase CFD solver for water-entry problems, incorporating Volume of Fluid (VOF) and fictitious domain methods for fluid–structure interaction (FSI).
+      - Designed and parallelized the solver using MPI on Linux HPC clusters; implemented Bi-Conjugate Gradient Stabilized (BiCGStab) and multigrid methods for efficient solution of the pressure Poisson equation, achieving an 8× improvement in accuracy with residuals reduced to 10−12.
+      - Optimized multi-core scalability through domain decomposition, load balancing, and communication-efficient strategies over InfiniBand interconnects; conducted strong and weak scaling analyses, resulting in a 6× performance improvement.
+      - Conducted performance benchmarking and scalability analysis across core counts, comparable to roofline analysis used in GPU inference optimization.
+  - role: Research Assistant (High-Performance Multiphase CFD Simulations)
+    org: TU Bergakademie Freiberg (Germany)
+    start: May 2021
+    end: August 2022
+    summary: |
+      - Performed transient multiphase simulations in OpenFOAM using VOF, dynamic mesh, and Adaptive mesh (AMR).
+      - Optimized solver for high density-ratio flows, gaining deep intuition for numerical stability and performance trade-offs applicable to low-latency, resource-constrained inference systems.
   - role: AI Research Intern
     org: OpenAI
     start: 2019-06-01
@@ -76,32 +93,46 @@ experience:
 skills:
   - name: Technical Skills
     items:
-      - label: Python
+      - label: C/C++, Python, MATLAB
         level: 5
-      - label: Machine Learning
+      - label: Machine Learning, OpenAI, LLM fine- tuning, Transformers
         level: 5
-      - label: Cloud Computing
-        level: 4
+      - label: GDB debugger and TotalView
+        level: 5
   - name: Research & Communication
     items:
       - label: Academic Writing
         level: 5
       - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
+        level: 5
 
 languages:
   - name: English
     level: 5
     label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
+  - name: Hindi
+    level: 5
+    label: Native
+  - name: German
+    level: 3
+    label: Intermediate
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
+  - title: First Prize Winner
+    awarder: University of Massachusetts Dartmouth
+    date: "2025"
+    summary: Poster Presentation Competition, MUST event
+    icon: hero/trophy
+  - title: APS Travel Grant
+    awarder: American Physical Society
+    date: "2024"
+    summary: Division of Fluid Dynamics
+    icon: hero/trophy
+  - title: AUMUND Scholarship
+    awarder: AUMUND Fordertechnik GmbH
+    date: "2021"
+    icon: hero/trophy
+  - title: Deutschland Stipendium
+    awarder: TU Bergakademie Freiberg
+    date: "2020"
     icon: hero/trophy
