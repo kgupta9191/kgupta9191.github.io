@@ -8,7 +8,8 @@ sections:
   - block: collection
     content:
       title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      text: This section presents selected ML/AI projects focused on deep learning, predictive modeling, classification, large language models, RAG-based systems, and scientific AI applications.
+      count: 20      
       filters:
         folders:
           - projects

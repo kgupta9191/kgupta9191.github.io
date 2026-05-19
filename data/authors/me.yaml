@@ -34,15 +34,11 @@ education:
     start: 2023
     end: Present
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
+      Developing high-fidelity multiphase CFD simulations to investigate fluid–structure interaction, cavity dynamics, impact forces, and added mass during vertical and oblique water entry of bodies with different nose geometries.
   - degree: MS Data Science
     institution: University of Massachusetts Dartmouth
     start: 2025
-    end: Present
+    end: 2026
   - degree: MS Mechanical & Process Engineering
     institution: TU Freiberg (Germany)
     start: 2019
@@ -51,16 +47,22 @@ education:
 experience:
   - role: Teaching Assistant (High Performance Scientific Computing)
     org: University of Massachusetts Dartmouth
-    start: December 2025
+    start: January 2026
+    end: May 2026
     summary: |
-      - Guided students in Python, C, numerical linear algebra, and parallel computing (MPI, OpenMP, CUDA), while teaching Git, Bitbucket and Jupyter-based data analysis.
-      - Mentored Data Science students to develop and optimize parallel programs for achieving significant speedups (using GPUs), covering memory access, load balancing, debugging (GDB, TotalView), and performance/scalability analysis.
+      - Guided students in Python, C, numerical linear algebra, and parallel computing (MPI, OpenMP, CUDA), while teaching Git (version control), Bitbucket, and Jupyter-based data analysis.
+      - Mentored Data Science students by holding weekly computational help-desk hours to develop and optimize parallel programs for achieving significant speedups (using GPUs), covering memory access, load balancing, debugging (GDB, TotalView), and performance/scalability analysis.
+      - Assisted in debugging and profiling parallel codes using GDB, TotalView, and performance analysis tools.
       - Delivered technical presentations and clearly articulated complex computational concepts to diverse student audiences.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: Graduate Assistant (Machine Learning / AI)
+  - role: Teaching Assistant (Thermal Systems Design)
+    org: University of Massachusetts Dartmouth
+    start: September 2025
+    end: December 2025
+    summary: |
+      - Assisted engineering students in thermal system design and analysis using EES and COMSOL Multiphysics.
+      - Assisted teams in planning workflows, meeting deadlines, and resolving technical challenges.
+      - Provided feedback on calculations and design reports, ensuring adherence to performance, cost, and feasibility constraints.  
+  - role: Graduate Researcher (Data Scientist)
     start: January 2025
     summary: |
       - Deployed Ollama LLM on a Unity HPC cluster via Docker with GPU acceleration, achieving 3–5× inference throughput improvement over CPU baselines; profiled end-to-end latency and memory footprint to identify optimization opportu- nities analogous to TensorRT-LLM deployment workflows.
@@ -76,19 +78,17 @@ experience:
       - Designed and parallelized the solver using MPI on Linux HPC clusters; implemented Bi-Conjugate Gradient Stabilized (BiCGStab) and multigrid methods for efficient solution of the pressure Poisson equation, achieving an 8× improvement in accuracy with residuals reduced to 10−12.
       - Optimized multi-core scalability through domain decomposition, load balancing, and communication-efficient strategies over InfiniBand interconnects; conducted strong and weak scaling analyses, resulting in a 6× performance improvement.
       - Conducted performance benchmarking and scalability analysis across core counts, comparable to roofline analysis used in GPU inference optimization.
+      - Investigated effects of nose curvature on vertical water entry, demonstrating how concave, flat, and convex noses influence cavity formation, splash curtain dynamics, and impact forces.
+      - Showed that oblique water entry produces asymmetric cavity shapes, reduced impact forces, and lower added mass; developed methodology to quantify added mass for different nose geometries and a theoretical model to predict cavity closure (pinch-off) events.    
   - role: Research Assistant (High-Performance Multiphase CFD Simulations)
     org: TU Bergakademie Freiberg (Germany)
     start: May 2021
     end: August 2022
     summary: |
-      - Performed transient multiphase simulations in OpenFOAM using VOF, dynamic mesh, and Adaptive mesh (AMR).
+      - Performed transient multiphase simulations in OpenFOAM using VOF, dynamic mesh, and Adaptive Mesh Refinement (AMR); investigated aerosol atomization in vocal folds using dynamic (moving) mesh techniques and Bash scripting to model vocal cord oscillations.
       - Optimized solver for high density-ratio flows, gaining deep intuition for numerical stability and performance trade-offs applicable to low-latency, resource-constrained inference systems.
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      - Conducted bionic modelling of Archer fish, investigating water jet behavior related to the Plateau–Rayleigh instability using OpenFOAM and ANSYS Fluent.
+
 
 skills:
   - name: Technical Skills

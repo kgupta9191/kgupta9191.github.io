@@ -18,7 +18,7 @@ tags:
 
 ## Background
 
-In marine engineering and naval architecture, accurately predicting hydrodynamic forces (such as drag, lift, and torque) on submerged objects like ship hulls, underwater vehicles, or offshore structures is crucial for design optimization, performance evaluation, and real-time control systems. Traditional methods rely on computational fluid dynamics (CFD) simulations, which are computationally intensive and time-consuming, often requiring hours or days for a single high-fidelity simulation. Experimental data from wind tunnels or water tanks is limited in scale and expensive to acquire. To address these chal- lenges, deep neural networks (DNNs) can serve as surrogate models to approximate these forces rapidly, but they require vast amounts of training data to capture the complex, nonlinear interactions in fluid flows.
+In marine engineering and naval architecture, accurately predicting hydrodynamic forces (such as drag, lift, and torque) on submerged objects like ship hulls, underwater vehicles, or offshore structures is crucial for design optimization, performance evaluation, and real-time control systems. Traditional methods rely on computational fluid dynamics (CFD) simulations, which are computationally intensive and time-consuming, often requiring hours or days for a single high-fidelity simulation. Experimental data from wind tunnels or water tanks is limited in scale and expensive to acquire. To address these challenges, deep neural networks (DNNs) can serve as surrogate models to approximate these forces rapidly, but they require vast amounts of training data to capture the complex, nonlinear interactions in fluid flows.
 
 <!--more-->
 
@@ -39,5 +39,5 @@ The model is trained on a GPU-enabled system with the following configuration:
 
 The true-versus-predicted curve demonstrates excellent agreement between the model predictions and the reference data, indicating strong predictive accuracy of the trained model.
 
-![Cavity formation result](graph.png)
+<img src="/images/nn_forces.png" style="width:100%; max-width:900px;">
 
